@@ -3,6 +3,9 @@ import { prisma } from '@/lib/prisma'
 import { Role } from '@prisma/client'
 import { randomInt } from 'crypto'
 
+// Force dynamic rendering (no pre-render at build time)
+export const dynamic = 'force-dynamic'
+
 // POST - Create a new round
 export async function POST(request: NextRequest) {
   const body = await request.json()

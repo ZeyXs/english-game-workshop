@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
+// Force dynamic rendering (no pre-render at build time)
+export const dynamic = 'force-dynamic'
+
 // GET - Récupérer une partie par ID (via query param)
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams

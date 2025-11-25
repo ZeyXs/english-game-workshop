@@ -37,15 +37,17 @@ cd brand-architect
 # Créer le fichier .env
 cp env.example .env
 
-# Lancer les services
-docker-compose up -d
+# Ajouter votre clé LogoDev dans .env
+LOGODEV_API_KEY="votre_cle"
 
-# La première fois, lancer les migrations et le seed
-docker-compose exec app npx prisma migrate deploy
-docker-compose exec app npx prisma db seed
+# Lancer les services (build + run)
+docker compose up --build -d
 ```
 
 L'application sera disponible sur http://localhost:3000
+
+> ℹ️ Le conteneur `app` applique automatiquement le schéma Prisma (`prisma db push`) et synchronise les marques depuis `data/brands.json`.  
+> Utilisez `SKIP_DB_SETUP=true` ou `SKIP_DB_SEED=true` dans votre `.env`/`docker-compose.yml` si vous souhaitez désactiver ces étapes.
 
 ### Développement local
 
@@ -57,7 +59,7 @@ npm install
 cp env.example .env
 
 # Lancer la base de données PostgreSQL
-docker-compose up db -d
+docker compose up db -d
 
 # Générer le client Prisma
 npm run db:generate
@@ -78,7 +80,7 @@ npm run dev
 brand-architect/
 ├── prisma/
 │   ├── schema.prisma      # Schéma de la base de données
-│   └── seed.ts            # Données de seed (marques)
+│   └── seed.js            # Synchronisation des marques
 ├── src/
 │   ├── app/
 │   │   ├── api/           # Routes API

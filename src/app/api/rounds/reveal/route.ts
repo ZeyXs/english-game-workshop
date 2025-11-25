@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
+// Force dynamic rendering (no pre-render at build time)
+export const dynamic = 'force-dynamic'
+
 // POST - Révéler le rôle d'un joueur
 export async function POST(request: NextRequest) {
   const body = await request.json()
