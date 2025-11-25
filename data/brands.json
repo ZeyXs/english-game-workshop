@@ -1,0 +1,349 @@
+{
+  "brands": [
+    {
+      "name": "Nike",
+      "domain": "nike.com",
+      "category": "sport",
+      "difficulty": 1,
+      "description": "The swoosh - a dynamic checkmark",
+      "hint": "Founded by a track coach who poured rubber on a waffle iron to create the first sole. The name comes from the Greek goddess of victory."
+    },
+    {
+      "name": "Adidas",
+      "domain": "adidas.com",
+      "category": "sport",
+      "difficulty": 1,
+      "description": "Three parallel stripes",
+      "hint": "The name comes from founder Adolf 'Adi' Dassler. His brother Rudolf started Puma after a family dispute during WWII."
+    },
+    {
+      "name": "Puma",
+      "domain": "puma.com",
+      "category": "sport",
+      "difficulty": 2,
+      "description": "A leaping puma",
+      "hint": "Founded by Rudolf Dassler after splitting from his brother Adi (who founded Adidas). The brothers' feud divided their entire hometown."
+    },
+    {
+      "name": "Apple",
+      "domain": "apple.com",
+      "category": "tech",
+      "difficulty": 1,
+      "description": "A bitten apple",
+      "hint": "The bite was added to ensure people wouldn't confuse it with a cherry. Steve Jobs worked at an apple farm before starting the company."
+    },
+    {
+      "name": "Microsoft",
+      "domain": "microsoft.com",
+      "category": "tech",
+      "difficulty": 1,
+      "description": "Four colored squares",
+      "hint": "The four colors represent different product lines: blue for Windows, green for Xbox, red for Office, and yellow for Bing."
+    },
+    {
+      "name": "Google",
+      "domain": "google.com",
+      "category": "tech",
+      "difficulty": 2,
+      "description": "Colorful letter G",
+      "hint": "Originally called 'BackRub', it was renamed after 'googol' (1 followed by 100 zeros), misspelled during domain registration."
+    },
+    {
+      "name": "Amazon",
+      "domain": "amazon.com",
+      "category": "tech",
+      "difficulty": 2,
+      "description": "Arrow from A to Z",
+      "hint": "The arrow represents that Amazon sells everything from A to Z, and also forms a smile. Originally sold only books."
+    },
+    {
+      "name": "Twitter",
+      "domain": "twitter.com",
+      "category": "tech",
+      "difficulty": 1,
+      "description": "A bird (Larry the Bird)",
+      "hint": "The bird is named Larry after NBA legend Larry Bird. A tweet was limited to 140 characters to fit in a single SMS message."
+    },
+    {
+      "name": "Instagram",
+      "domain": "instagram.com",
+      "category": "tech",
+      "difficulty": 2,
+      "description": "Stylized camera",
+      "hint": "The original logo was a Polaroid-style camera. The app was created in just 8 weeks and sold to Facebook for $1 billion."
+    },
+    {
+      "name": "Spotify",
+      "domain": "spotify.com",
+      "category": "tech",
+      "difficulty": 1,
+      "description": "Circle with three curved lines",
+      "hint": "The name is a combination of 'spot' and 'identify'. Founded in Sweden as a legal alternative to music piracy."
+    },
+    {
+      "name": "Netflix",
+      "domain": "netflix.com",
+      "category": "tech",
+      "difficulty": 1,
+      "description": "Red letter N",
+      "hint": "Started as a DVD-by-mail service. The famous 'ta-dum' sound was created to be recognizable in just 3 seconds."
+    },
+    {
+      "name": "YouTube",
+      "domain": "youtube.com",
+      "category": "tech",
+      "difficulty": 1,
+      "description": "Play button inside a rectangle",
+      "hint": "The first video uploaded was 'Me at the zoo' by co-founder Jawed Karim, lasting just 18 seconds."
+    },
+    {
+      "name": "PlayStation",
+      "domain": "playstation.com",
+      "category": "tech",
+      "difficulty": 2,
+      "description": "Intertwined P and S letters",
+      "hint": "Originally developed as a CD-ROM add-on for Nintendo. When Nintendo backed out, Sony created their own console."
+    },
+    {
+      "name": "Xbox",
+      "domain": "xbox.com",
+      "category": "tech",
+      "difficulty": 1,
+      "description": "X inside a circle",
+      "hint": "The name comes from 'DirectX Box'. Microsoft lost money on every original Xbox sold, profiting only from game sales."
+    },
+    {
+      "name": "Mercedes",
+      "domain": "mercedes-benz.com",
+      "category": "auto",
+      "difficulty": 1,
+      "description": "Three-pointed star in a circle",
+      "hint": "The three points represent domination of land, sea, and air. Named after a car dealer's daughter, Mercedes."
+    },
+    {
+      "name": "BMW",
+      "domain": "bmw.com",
+      "category": "auto",
+      "difficulty": 1,
+      "description": "Circle divided in four (blue/white)",
+      "hint": "The logo represents a spinning aircraft propeller against a blue sky. BMW originally made airplane engines."
+    },
+    {
+      "name": "Audi",
+      "domain": "audi.com",
+      "category": "auto",
+      "difficulty": 1,
+      "description": "Four interlocking rings",
+      "hint": "Each ring represents one of four companies that merged in 1932: Audi, DKW, Horch, and Wanderer."
+    },
+    {
+      "name": "Toyota",
+      "domain": "toyota.com",
+      "category": "auto",
+      "difficulty": 2,
+      "description": "Three interlocking ellipses",
+      "hint": "The overlapping ovals symbolize the heart of the customer, the product, and technological progress."
+    },
+    {
+      "name": "Volkswagen",
+      "domain": "volkswagen.com",
+      "category": "auto",
+      "difficulty": 1,
+      "description": "V and W stacked in a circle",
+      "hint": "Means 'People's Car' in German. The Beetle was commissioned by Hitler but became a symbol of the 1960s counterculture."
+    },
+    {
+      "name": "Ferrari",
+      "domain": "ferrari.com",
+      "category": "auto",
+      "difficulty": 2,
+      "description": "Prancing horse",
+      "hint": "The horse was originally a WWI fighter pilot's lucky emblem. Enzo Ferrari was offered it by the pilot's mother."
+    },
+    {
+      "name": "McDonald's",
+      "domain": "mcdonalds.com",
+      "category": "food",
+      "difficulty": 1,
+      "description": "Golden arches (M)",
+      "hint": "The arches were originally part of the restaurant architecture. A psychologist said they resembled 'mother's breasts' making them subconsciously appealing."
+    },
+    {
+      "name": "Starbucks",
+      "domain": "starbucks.com",
+      "category": "food",
+      "difficulty": 3,
+      "description": "Twin-tailed mermaid (siren)",
+      "hint": "Named after Starbuck, the first mate in Moby Dick. The siren was chosen because Seattle has a maritime history."
+    },
+    {
+      "name": "Coca-Cola",
+      "domain": "coca-cola.com",
+      "category": "food",
+      "difficulty": 2,
+      "description": "Cursive script lettering",
+      "hint": "Originally contained cocaine from coca leaves and caffeine from kola nuts. The red color helped identify it during Prohibition."
+    },
+    {
+      "name": "Pepsi",
+      "domain": "pepsi.com",
+      "category": "food",
+      "difficulty": 1,
+      "description": "Red/white/blue circle",
+      "hint": "Originally called 'Brad's Drink'. The current logo reportedly cost $1 million to redesign, inspired by the Mona Lisa and Earth's magnetic field."
+    },
+    {
+      "name": "KFC",
+      "domain": "kfc.com",
+      "category": "food",
+      "difficulty": 2,
+      "description": "Colonel Sanders",
+      "hint": "Colonel Sanders' secret recipe with 11 herbs and spices is kept in a vault. He was rejected by 1,009 restaurants before his first yes."
+    },
+    {
+      "name": "Burger King",
+      "domain": "burgerking.com",
+      "category": "food",
+      "difficulty": 1,
+      "description": "Burger between two buns",
+      "hint": "The logo is literally a burger in a bun. Burger King was originally called 'Insta-Burger King' before the name was shortened."
+    },
+    {
+      "name": "Red Bull",
+      "domain": "redbull.com",
+      "category": "food",
+      "difficulty": 2,
+      "description": "Two red bulls facing each other",
+      "hint": "Based on a Thai energy drink called Krating Daeng. Red Bull owns a Formula 1 team and a football club."
+    },
+    {
+      "name": "Chanel",
+      "domain": "chanel.com",
+      "category": "fashion",
+      "difficulty": 1,
+      "description": "Two interlocking Cs",
+      "hint": "Coco Chanel never married. She popularized the 'little black dress' and Chanel No. 5 was the first perfume to bear a designer's name."
+    },
+    {
+      "name": "Louis Vuitton",
+      "domain": "louisvuitton.com",
+      "category": "fashion",
+      "difficulty": 1,
+      "description": "Interlocked LV",
+      "hint": "Louis Vuitton started as a trunk-maker for Napoleon III's wife. The monogram was created to prevent counterfeiting in 1896."
+    },
+    {
+      "name": "Lacoste",
+      "domain": "lacoste.com",
+      "category": "fashion",
+      "difficulty": 2,
+      "description": "Green crocodile",
+      "hint": "Founded by tennis player René Lacoste, nicknamed 'the Crocodile' for his tenacity on court and a bet involving an alligator skin suitcase."
+    },
+    {
+      "name": "WWF",
+      "domain": "worldwildlife.org",
+      "category": "ngo",
+      "difficulty": 1,
+      "description": "Giant panda",
+      "hint": "The panda was chosen because it was black and white (cheap to print) and is a beloved endangered species. Chi-Chi the panda inspired it."
+    },
+    {
+      "name": "Red Cross",
+      "domain": "redcross.org",
+      "category": "ngo",
+      "difficulty": 1,
+      "description": "Red cross on white",
+      "hint": "The symbol is an inverted Swiss flag to honor Henry Dunant, the Swiss founder. In Muslim countries, a Red Crescent is used instead."
+    },
+    {
+      "name": "Olympics",
+      "domain": "olympics.com",
+      "category": "sport",
+      "difficulty": 1,
+      "description": "Five interlocking rings",
+      "hint": "The five rings represent the five inhabited continents. At least one of the six colors (including white) appears in every national flag."
+    },
+    {
+      "name": "NASA",
+      "domain": "nasa.gov",
+      "category": "tech",
+      "difficulty": 1,
+      "description": "Blue circle with stars and orbit",
+      "hint": "The 'meatball' logo was retired in 1975 for the 'worm' logo but brought back in 1992. It features a red chevron for aeronautics."
+    },
+    {
+      "name": "Airbnb",
+      "domain": "airbnb.com",
+      "category": "tech",
+      "difficulty": 2,
+      "description": "A stylized letter A (called Bélo)",
+      "hint": "The founders initially sold cereal boxes called 'Obama O's' and 'Cap'n McCain's' to fund the startup during the 2008 election."
+    },
+    {
+      "name": "Uber",
+      "domain": "uber.com",
+      "category": "tech",
+      "difficulty": 2,
+      "description": "Stylized U",
+      "hint": "Originally called UberCab, they dropped 'Cab' after legal pressure. The name means 'super' or 'topmost' in German."
+    },
+    {
+      "name": "Tesla",
+      "domain": "tesla.com",
+      "category": "auto",
+      "difficulty": 2,
+      "description": "Stylized T",
+      "hint": "The T represents a cross-section of an electric motor. Named after inventor Nikola Tesla who pioneered AC electricity."
+    },
+    {
+      "name": "Porsche",
+      "domain": "porsche.com",
+      "category": "auto",
+      "difficulty": 2,
+      "description": "Horse on yellow shield",
+      "hint": "The horse comes from Stuttgart's coat of arms, where Porsche is headquartered. Ferdinand Porsche also designed the VW Beetle."
+    },
+    {
+      "name": "Shell",
+      "domain": "shell.com",
+      "category": "energy",
+      "difficulty": 1,
+      "description": "Yellow and red shell",
+      "hint": "Started as a shop selling oriental seashells in London. The pecten (scallop) shell has been used since 1904."
+    },
+    {
+      "name": "Mastercard",
+      "domain": "mastercard.com",
+      "category": "finance",
+      "difficulty": 1,
+      "description": "Two overlapping circles (red and yellow)",
+      "hint": "The overlapping circles were designed to represent the connection between consumers and merchants worldwide."
+    },
+    {
+      "name": "Visa",
+      "domain": "visa.com",
+      "category": "finance",
+      "difficulty": 1,
+      "description": "Blue and gold VISA letters",
+      "hint": "Originally called BankAmericard. 'Visa' was chosen because it's easily pronounced in any language and evokes universal acceptance."
+    },
+    {
+      "name": "FedEx",
+      "domain": "fedex.com",
+      "category": "logistics",
+      "difficulty": 2,
+      "description": "Purple and orange text with hidden arrow",
+      "hint": "There's a hidden arrow between the E and x, representing speed and precision. The founder got a C on his Yale paper proposing the idea."
+    },
+    {
+      "name": "Amazon Prime",
+      "domain": "amazon.com",
+      "category": "tech",
+      "difficulty": 2,
+      "description": "Arrow and checkmark",
+      "hint": "Prime was launched in 2005 offering free 2-day shipping for $79/year. Employees thought it was too expensive—it now has 200+ million members."
+    }
+  ]
+}
+

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('/fonts/GlacialIndifference-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('/fonts/GlacialIndifference-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-poppins: 'Poppins', system-ui, sans-serif;
+  --font-glacial: 'Glacial Indifference', system-ui, sans-serif;
+  
+  --color-primary: #f2c94c;
+  --color-secondary: #1f4e79;
+  --color-gray: #bdbdbd;
+  --color-light: #f1e9e2;
+  --color-dark: #343232;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-glacial);
+  background: var(--color-light);
+  min-height: 100vh;
+  color: var(--color-dark);
+  overflow-x: hidden;
+}
+
+/* Subtle background pattern */
+.pattern-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.03;
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--color-primary) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, var(--color-secondary) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Floating decorative shapes */
+.shape {
+  position: absolute;
+  opacity: 0.06;
+  animation: float 8s ease-in-out infinite;
+}
+
+.shape-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+.shape-square {
+  width: 150px;
+  height: 150px;
+  border-radius: 2rem;
+  background: var(--color-primary);
+  transform: rotate(15deg);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply relative overflow-hidden px-8 py-4 bg-brand-primary text-brand-dark font-display font-semibold text-lg rounded-2xl;
+  @apply transition-all duration-300 ease-out;
+  @apply hover:shadow-primary hover:scale-[1.02];
+  @apply active:scale-[0.98];
+}
+
+.btn-primary::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent;
+  @apply -translate-x-full transition-transform duration-500;
+}
+
+.btn-primary:hover::before {
+  @apply translate-x-full;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border-2 border-brand-secondary text-brand-secondary font-display font-medium;
+  @apply rounded-2xl transition-all duration-300;
+  @apply hover:bg-brand-secondary hover:text-white;
+}
+
+.btn-danger {
+  @apply px-6 py-3 bg-red-50 border-2 border-red-400 text-red-500 font-display font-medium;
+  @apply rounded-2xl transition-all duration-300;
+  @apply hover:bg-red-500 hover:text-white hover:border-red-500;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white border border-brand-gray/20 rounded-3xl;
+  @apply shadow-soft;
+}
+
+.card-hover {
+  @apply transition-all duration-300;
+  @apply hover:shadow-soft-lg hover:-translate-y-1;
+}
+
+/* Input styles */
+.input {
+  @apply w-full px-5 py-4 bg-white border-2 border-brand-gray/30 rounded-2xl;
+  @apply text-brand-dark placeholder-brand-gray font-body;
+  @apply focus:outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/20;
+  @apply transition-all duration-300;
+}
+
+/* Role reveal card - animations handled by Framer Motion */
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-primary bg-clip-text text-transparent;
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Stagger animation helper */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Role-specific colors */
+.role-architect {
+  @apply text-brand-secondary border-brand-secondary bg-brand-secondary/10;
+}
+
+.role-player {
+  @apply text-emerald-600 border-emerald-500 bg-emerald-50;
+}
+
+.role-saboteur {
+  @apply text-red-500 border-red-400 bg-red-50;
+}
+
+/* Badge styles */
+.badge {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-display text-sm font-medium;
+}
+
+.badge-primary {
+  @apply bg-brand-primary/20 text-brand-dark border border-brand-primary/30;
+}
+
+.badge-secondary {
+  @apply bg-brand-secondary/10 text-brand-secondary border border-brand-secondary/20;
+}

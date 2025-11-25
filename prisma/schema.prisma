@@ -1,0 +1,100 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Game {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  status          GameStatus @default(SETUP)
+  currentRound    Int      @default(0)
+  saboteurWins    Int      @default(0)
+  saboteurId      String?  // The saboteur stays the same for the entire game
+  saboteur        Player?  @relation("GameSaboteur", fields: [saboteurId], references: [id])
+  
+  players         Player[]
+  rounds          Round[]
+}
+
+model Player {
+  id        String   @id @default(cuid())
+  name      String
+  order     Int      // Ordre du joueur dans la partie
+  
+  gameId    String
+  game      Game     @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  
+  roundRoles      RoundRole[]
+  saboteurInGames Game[]      @relation("GameSaboteur")
+  
+  @@index([gameId])
+}
+
+model Round {
+  id              String   @id @default(cuid())
+  roundNumber     Int
+  brandId         String   // ID de la marque à deviner
+  brandName       String   // Nom de la marque
+  status          RoundStatus @default(REVEAL_ROLES)
+  saboteurWon     Boolean? // null = pas encore terminé
+  
+  gameId          String
+  game            Game     @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  
+  roles           RoundRole[]
+  
+  @@index([gameId])
+}
+
+model RoundRole {
+  id          String   @id @default(cuid())
+  role        Role
+  revealed    Boolean  @default(false)
+  
+  playerId    String
+  player      Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  
+  roundId     String
+  round       Round    @relation(fields: [roundId], references: [id], onDelete: Cascade)
+  
+  @@unique([playerId, roundId])
+  @@index([roundId])
+}
+
+model Brand {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  domain      String?  // Domain for LogoKit API (e.g., "nike.com")
+  category    String   // ex: "sport", "tech", "food", "auto"
+  difficulty  Int      @default(1) // 1-3
+  description String?  // Optional logo description
+  hint        String?  // Educational hint/fact about the brand
+}
+
+enum GameStatus {
+  SETUP         // Ajout des joueurs
+  REVEAL_ROLES  // Révélation des rôles
+  PLAYING       // Le round est en cours
+  VOTING        // Vote pour la marque
+  ROUND_END     // Fin du round, résultat
+  FINISHED      // Partie terminée
+}
+
+enum RoundStatus {
+  REVEAL_ROLES  // Révélation des rôles aux joueurs
+  DRAWING       // L'architecte dessine
+  VOTING        // Les joueurs votent
+  COMPLETED     // Round terminé
+}
+
+enum Role {
+  ARCHITECT   // Le joueur qui dessine
+  PLAYER      // Joueur normal qui doit deviner
+  SABOTEUR    // Le saboteur
+}
+
