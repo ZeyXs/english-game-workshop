@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: brand-architect-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: brandarchitect
+      POSTGRES_PASSWORD: brandarchitect_secret
+      POSTGRES_DB: brandarchitect
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U brandarchitect -d brandarchitect"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    image: ghcr.io/zeyxs/english-game-workshop:latest
+    container_name: brand-architect-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://brandarchitect:brandarchitect_secret@db:5432/brandarchitect
+      NODE_ENV: production
+      SKIP_DB_SETUP: ${SKIP_DB_SETUP-false}
+      SKIP_DB_SEED: ${SKIP_DB_SEED-false}
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+

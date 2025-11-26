@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: 'BrandArchitect - The Board Game',
   description: 'Build logos with geometric shapes and find the saboteur!',
   manifest: '/manifest.json',
+  icons: {
+    icon: '/brandarchitect-logo-squared.svg',
+    apple: '/brandarchitect-logo-squared.svg',
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',

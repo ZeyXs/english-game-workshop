@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { X } from 'lucide-react'
 
 interface GameHeaderProps {
@@ -27,14 +28,14 @@ export default function GameHeader({
       <div className="max-w-lg mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo - icon only */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-9 h-9 relative flex-shrink-0">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 
-                           border-l-[6px] border-r-[6px] border-b-[12px] 
-                           border-l-transparent border-r-transparent border-b-brand-primary" />
-            <div className="absolute bottom-0 left-0 w-3.5 h-3.5 rounded-full bg-brand-secondary" />
-            <div className="absolute bottom-0 right-0 w-3 h-3 bg-brand-gray rounded rotate-12" />
-            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-brand-primary" />
-          </div>
+          <Image
+            src="/brandarchitect-logo-squared.svg"
+            alt="BrandArchitect"
+            width={36}
+            height={36}
+            className="flex-shrink-0"
+            priority
+          />
         </Link>
         
         {/* Round counter */}

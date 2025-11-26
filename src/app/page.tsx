@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Gamepad2, BookOpen } from 'lucide-react'
-import Logo from '@/components/Logo'
 
 export default function HomePage() {
   return (
@@ -17,8 +17,8 @@ export default function HomePage() {
       >
         {/* Logo Animation */}
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ 
             type: 'spring',
             stiffness: 100,
@@ -26,25 +26,16 @@ export default function HomePage() {
           }}
           className="mb-6 sm:mb-8 flex justify-center"
         >
-          {/* Smaller logo on mobile, larger on desktop */}
-          <div className="block sm:hidden">
-            <Logo size="lg" />
-          </div>
-          <div className="hidden sm:block">
-            <Logo size="xl" />
-          </div>
+          {/* Full logo with text */}
+          <Image
+            src="/brandarchitect-logo.svg"
+            alt="BrandArchitect"
+            width={400}
+            height={140}
+            className="w-[280px] sm:w-[400px] h-auto"
+            priority
+          />
         </motion.div>
-        
-        {/* Title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="font-display text-3xl sm:text-5xl md:text-6xl font-extrabold mb-3 sm:mb-4"
-        >
-          <span className="text-brand-secondary">Brand</span>
-          <span className="text-brand-primary">Architect</span>
-        </motion.h1>
         
         {/* Tagline */}
         <motion.p
